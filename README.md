@@ -2,7 +2,7 @@
 
 e-Shop is an online shopping app
 
-Heroku [link]()
+Heroku [link](https://e-shop-43rt1q.herokuapp.com/)
 
 ### Prerequisites	
 
