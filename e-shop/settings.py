@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", default="secret_key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG", default=1))
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*", "https://e-shop-43rt1q.herokuapp.com/"]
 
 
 # Application definition
@@ -84,11 +84,11 @@ WSGI_APPLICATION = "e-shop.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": os.environ.get("DB_ENGINE", "django.db.backends.sqlite3"),
-        "NAME": os.environ.get("POSTGRES_NAME", "db.sqlite3"),
-        "USER": os.environ.get("POSTGRES_USER", "user"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "password"),
-        "HOST": os.environ.get("DB_HOST", "localhost"),
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": os.environ.get("POSTGRES_NAME", "e-shop"),
+        "USER": os.environ.get("POSTGRES_USER", "postgres"),
+        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "seaess"),
+        "HOST": os.environ.get("DB_HOST", "127.0.0.1"),
         "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }

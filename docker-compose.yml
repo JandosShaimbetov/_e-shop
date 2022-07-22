@@ -2,11 +2,11 @@ version: "3.9"
 
 services:
   db:
-    image: e-shop_db
+    image: e-shop
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=e-shop_db
+      - POSTGRES_DB=e-shop
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=seaess
   web:
@@ -17,8 +17,8 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - POSTGRES_NAME=postgres
+      - POSTGRES_NAME=e-shop
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=seaess
     depends_on:
       - db
